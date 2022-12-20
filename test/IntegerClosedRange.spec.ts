@@ -5,21 +5,21 @@ describe("IntegerClosedRange Test", () => {
     describe("整数閉区間を示す", () => {
         test("整数閉区間オブジェクトは下端点を返す", () => {
             const integerClosedRange = Fixture.generateIntegerClosedRange({
-                lowerEndPoint: 3,
+                lowerEndPoint: 1,
             });
-            expect(3).toBe(integerClosedRange.lowerEndPoint);
+            expect(1).toBe(integerClosedRange.lowerEndPoint);
         });
 
         test("整数閉区間オブジェクトは上端点を返す", () => {
             const integerClosedRange = Fixture.generateIntegerClosedRange({
-                upperEndPoint: 8,
+                upperEndPoint: 1,
             });
-            expect(8).toBe(integerClosedRange.upperEndPoint);
+            expect(1).toBe(integerClosedRange.upperEndPoint);
         });
 
         test("整数閉区間オブジェクトは下端点と上端点の両方を文字列にして返す", () => {
             const integerClosedRange = Fixture.generateIntegerClosedRange();
-            expect("[1,2]").toBe(integerClosedRange.getRange());
+            expect("[3,8]").toBe(integerClosedRange.getRange());
         });
 
         describe("1点のみの区間もアリ", () => {

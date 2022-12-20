@@ -6,8 +6,8 @@ export class Fixture {
         upperEndPoint?: number;
     }): IntegerClosedRange {
         const val = {
-            lowerEndPoint: 1,
-            upperEndPoint: 2,
+            lowerEndPoint: 3,
+            upperEndPoint: 8,
             ...param,
         };
         const { lowerEndPoint, upperEndPoint } = val;
