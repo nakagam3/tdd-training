@@ -1,4 +1,5 @@
 import { IntegerClosedRange } from "../lib/IntegerClosedRange";
+import { Fixture } from "./Fixture";
 
 describe("IntegerClosedRange Test", () => {
     describe("整数閉区間を示す", () => {
@@ -9,7 +10,10 @@ describe("IntegerClosedRange Test", () => {
         });
 
         test("整数閉区間オブジェクトは下端点を返す", () => {
-            expect(1).toBe(integerClosedRange.lowerEndPoint);
+            const integerClosedRange = Fixture.generateIntegerClosedRange({
+                lowerEndPoint: 3,
+            });
+            expect(3).toBe(integerClosedRange.lowerEndPoint);
         });
 
         test("整数閉区間オブジェクトは上端点を返す", () => {
