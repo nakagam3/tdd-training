@@ -15,5 +15,9 @@ describe("IntegerClosedRange Test", () => {
         test("整数閉区間オブジェクトは上端点を返す", () => {
             expect(2).toBe(integerClosedRange.upperEndPoint);
         });
+
+        test("整数閉区間オブジェクトは下端点と上端点の両方を文字列にして返す", () => {
+            expect("[1,2]").toBe(integerClosedRange.getRange());
+        });
     });
 });

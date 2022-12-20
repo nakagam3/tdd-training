@@ -14,4 +14,8 @@ export class IntegerClosedRange {
     get upperEndPoint(): number {
         return this._upperEndPoint;
     }
+
+    getRange() {
+        return `[${this.lowerEndPoint},${this.upperEndPoint}]`;
+    }
 }
