@@ -1,7 +1,7 @@
 import { IntegerClosedRange } from "../lib/IntegerClosedRange";
 
 export class Fixture {
-    static generateデフォルトの整数閉区間(param?: {
+    static createデフォルトの整数閉区間(param?: {
         lowerEndPoint?: number;
         upperEndPoint?: number;
     }): IntegerClosedRange {

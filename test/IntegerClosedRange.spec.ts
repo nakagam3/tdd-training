@@ -8,7 +8,7 @@ describe("IntegerClosedRange Test", () => {
             ${0}                       | ${"下端点として境界値である0を返せる"}
             ${Number.MIN_SAFE_INTEGER} | ${"下端点として整数の最小値である-9007199254740991を返せる"}
         `("$description", ({ lower }) => {
-            const integerClosedRange = Fixture.generateデフォルトの整数閉区間({
+            const integerClosedRange = Fixture.createデフォルトの整数閉区間({
                 lowerEndPoint: lower,
             });
             expect(lower).toBe(integerClosedRange.lowerEndPoint);
@@ -20,7 +20,7 @@ describe("IntegerClosedRange Test", () => {
             ${0}                       | ${"上端点として0を返せる"}
             ${Number.MIN_SAFE_INTEGER} | ${"上端点として整数の最小値である-9007199254740991を返せる"}
         `("$description", ({ upper }) => {
-            const integerClosedRange = Fixture.generateデフォルトの整数閉区間({
+            const integerClosedRange = Fixture.createデフォルトの整数閉区間({
                 upperEndPoint: upper,
             });
             expect(upper).toBe(integerClosedRange.upperEndPoint);
@@ -32,7 +32,7 @@ describe("IntegerClosedRange Test", () => {
             ${0}                       | ${Number.MAX_SAFE_INTEGER} | ${"境界値の0と最大の場合、その両方を文字列にして返す"}
             ${Number.MIN_SAFE_INTEGER} | ${0}                       | ${"境界値の0と最小の場合、その両方を文字列にして返す"}
         `("$description", ({ lower, upper }) => {
-            const integerClosedRange = Fixture.generateデフォルトの整数閉区間({
+            const integerClosedRange = Fixture.createデフォルトの整数閉区間({
                 lowerEndPoint: lower,
                 upperEndPoint: upper,
             });
@@ -43,6 +43,16 @@ describe("IntegerClosedRange Test", () => {
             test("整数閉区間オブジェクトは下端点を返す", () => {
                 const integerClosedRange = Fixture.create1点のみの整数閉区間(4);
                 expect("[4,4]").toBe(integerClosedRange.getRange());
+            });
+        });
+    });
+
+    describe("整数閉区間は区間内かを判定できる", () => {
+        describe("数値を含むか判定できる", () => {
+            test("4は3~8に含まれる", () => {
+                const range = Fixture.createデフォルトの整数閉区間();
+                const actual = range.isBetween(4);
+                expect(actual).toBeTruthy();
             });
         });
     });

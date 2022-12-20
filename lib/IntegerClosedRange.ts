@@ -18,4 +18,8 @@ export class IntegerClosedRange {
     getRange() {
         return `[${this.lowerEndPoint},${this.upperEndPoint}]`;
     }
+
+    isBetween(number: number) {
+        return true;
+    }
 }
