@@ -1,8 +1,8 @@
 export class IntegerClosedRange {
     private readonly _underPoint: number;
 
-    constructor() {
-        this._underPoint = 1;
+    constructor(point: number) {
+        this._underPoint = point;
     }
 
     get underPoint(): number {
