@@ -31,10 +31,7 @@ describe("IntegerClosedRange Test", () => {
 
         describe("1点のみの区間もアリ", () => {
             test("整数閉区間オブジェクトは下端点を返す", () => {
-                const integerClosedRange = Fixture.generateIntegerClosedRange({
-                    lowerEndPoint: 4,
-                    upperEndPoint: 4,
-                });
+                const integerClosedRange = Fixture.create1点のみの区間(4);
                 expect("[4,4]").toBe(integerClosedRange.getRange());
             });
         });

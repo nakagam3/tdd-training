@@ -13,4 +13,8 @@ export class Fixture {
         const { lowerEndPoint, upperEndPoint } = val;
         return new IntegerClosedRange(lowerEndPoint, upperEndPoint);
     }
+
+    static create1点のみの区間(endpoint: number): IntegerClosedRange {
+        return new IntegerClosedRange(endpoint, endpoint);
+    }
 }
