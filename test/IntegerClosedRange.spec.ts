@@ -1,4 +1,3 @@
-import { IntegerClosedRange } from "../lib/IntegerClosedRange";
 import { Fixture } from "./Fixture";
 
 describe("IntegerClosedRange Test", () => {
