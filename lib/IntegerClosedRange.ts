@@ -1,17 +1,17 @@
 export class IntegerClosedRange {
-    private readonly _underPoint: number;
-    private readonly _topPoint: number;
+    private readonly _lowerEndPoint: number;
+    private readonly _upperEndPoint: number;
 
-    constructor(point: number, top: number) {
-        this._underPoint = point;
-        this._topPoint = top;
+    constructor(lower: number, upper: number) {
+        this._lowerEndPoint = lower;
+        this._upperEndPoint = upper;
     }
 
-    get underPoint(): number {
-        return this._underPoint;
+    get lowerEndPoint(): number {
+        return this._lowerEndPoint;
     }
 
-    get topPoint(): number {
-        return this._topPoint;
+    get upperEndPoint(): number {
+        return this._upperEndPoint;
     }
 }
