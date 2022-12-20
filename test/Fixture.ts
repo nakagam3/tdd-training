@@ -1,7 +1,7 @@
 import { IntegerClosedRange } from "../lib/IntegerClosedRange";
 
 export class Fixture {
-    static generateIntegerClosedRange(param?: {
+    static generateデフォルトの整数閉区間(param?: {
         lowerEndPoint?: number;
         upperEndPoint?: number;
     }): IntegerClosedRange {
@@ -14,7 +14,7 @@ export class Fixture {
         return new IntegerClosedRange(lowerEndPoint, upperEndPoint);
     }
 
-    static create1点のみの区間(endpoint: number): IntegerClosedRange {
+    static create1点のみの整数閉区間(endpoint: number): IntegerClosedRange {
         return new IntegerClosedRange(endpoint, endpoint);
     }
 }

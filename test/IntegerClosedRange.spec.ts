@@ -11,27 +11,27 @@ describe("IntegerClosedRange Test", () => {
             ${-1}                      | ${"下端点として境界値である-1を返す"}
             ${Number.MIN_SAFE_INTEGER} | ${"下端点として整数の最小値である-9007199254740991を返す"}
         `("$description", ({ lower }) => {
-            const integerClosedRange = Fixture.generateIntegerClosedRange({
+            const integerClosedRange = Fixture.generateデフォルトの整数閉区間({
                 lowerEndPoint: lower,
             });
             expect(lower).toBe(integerClosedRange.lowerEndPoint);
         });
 
         test("整数閉区間オブジェクトは上端点を返す", () => {
-            const integerClosedRange = Fixture.generateIntegerClosedRange({
+            const integerClosedRange = Fixture.generateデフォルトの整数閉区間({
                 upperEndPoint: 1,
             });
             expect(1).toBe(integerClosedRange.upperEndPoint);
         });
 
         test("整数閉区間オブジェクトは下端点と上端点の両方を文字列にして返す", () => {
-            const integerClosedRange = Fixture.generateIntegerClosedRange();
+            const integerClosedRange = Fixture.generateデフォルトの整数閉区間();
             expect("[3,8]").toBe(integerClosedRange.getRange());
         });
 
         describe("1点のみの区間もアリ", () => {
             test("整数閉区間オブジェクトは下端点を返す", () => {
-                const integerClosedRange = Fixture.create1点のみの区間(4);
+                const integerClosedRange = Fixture.create1点のみの整数閉区間(4);
                 expect("[4,4]").toBe(integerClosedRange.getRange());
             });
         });
