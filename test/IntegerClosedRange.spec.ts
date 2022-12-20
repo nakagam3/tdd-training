@@ -6,10 +6,10 @@ describe("IntegerClosedRange Test", () => {
         test.each`
             lower                      | description
             ${Number.MAX_SAFE_INTEGER} | ${"下端点として整数の最大値である9007199254740991を返す"}
-            ${Number.MIN_SAFE_INTEGER} | ${"下端点として整数の最小値である-9007199254740991を返す"}
-            ${0}                       | ${"下端点として0を返す"}
             ${1}                       | ${"下端点として境界値である1を返す"}
+            ${0}                       | ${"下端点として0を返す"}
             ${-1}                      | ${"下端点として境界値である-1を返す"}
+            ${Number.MIN_SAFE_INTEGER} | ${"下端点として整数の最小値である-9007199254740991を返す"}
         `("$description", ({ lower }) => {
             const integerClosedRange = Fixture.generateIntegerClosedRange({
                 lowerEndPoint: lower,
