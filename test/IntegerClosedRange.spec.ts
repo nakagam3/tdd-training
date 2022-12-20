@@ -21,5 +21,15 @@ describe("IntegerClosedRange Test", () => {
             const integerClosedRange = Fixture.generateIntegerClosedRange();
             expect("[1,2]").toBe(integerClosedRange.getRange());
         });
+
+        describe("1点のみの区間もアリ", () => {
+            test("整数閉区間オブジェクトは下端点を返す", () => {
+                const integerClosedRange = Fixture.generateIntegerClosedRange({
+                    lowerEndPoint: 4,
+                    upperEndPoint: 4,
+                });
+                expect("[4,4]").toBe(integerClosedRange.getRange());
+            });
+        });
     });
 });
