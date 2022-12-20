@@ -1,4 +1,4 @@
-export default class Sample {
+export class Sample {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     print: (...data: any[]) => void;
 
@@ -12,6 +12,6 @@ export default class Sample {
     }
 }
 
-function hello() {
+export function hello() {
     return "Hello TDDBC!";
 }
