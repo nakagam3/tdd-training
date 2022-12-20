@@ -19,7 +19,7 @@ export class IntegerClosedRange {
         return `[${this.lowerEndPoint},${this.upperEndPoint}]`;
     }
 
-    isBetween(number: number) {
-        return true;
+    isBetween(point: number) {
+        return this.lowerEndPoint < point && point < this.upperEndPoint;
     }
 }
